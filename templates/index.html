@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Nathan Santos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">NS</div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">Sobre</a></li>
+                    <li><a href="{{ url_for('projects') }}">Skills</a></li>
+                    <li><a href="{{ url_for('projects') }}">Portfólio</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="home">
+            <div class="container home-content">
+                <div class="intro">
+                    <h2>Olá, eu sou Nathan Santos</h2>
+                    <p>Desenvolvedor Full Stack</p>
+                    <a href="{{ url_for('contact') }}" class="btn">Contate-me</a>
+                    <div class="social-links">
+                        <a href="https://github.com/NathanpSantos" target="_blank"><img src="{{ url_for('static', filename='images/github.png') }}" alt="GitHub"></a>
+                        <a href="https://www.linkedin.com/in/nathan-santospr-7604041b3/" target="_blank"><img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="LinkedIn"></a>
+                    </div>
+                </div>
+                <div class="photo">
+                    <img src="{{ url_for('static', filename='images/minhafoto.png') }}" alt="Nathan Santos">
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <div class="container">
+                <h2>Sobre Mim</h2>
+                <p>Sou estudante do 4º semestre de Análise e Desenvolvimento de Sistemas. Dedico-me aos estudos e à prática constante através de diversos projetos. Trabalho como Sales Advisor na Sodimac Homecenter, acumulando 1 ano de experiência. Nos meus projetos, utilizo tecnologias como HTML, CSS, JavaScript, Flask, entre outras. Meu objetivo é criar soluções inovadoras e eficientes.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill"><img src="{{ url_for('static', filename='images/html.png') }}" alt="HTML"> HTML</div>
+                    <div class="skill"><img src="{{ url_for('static', filename='images/css.png') }}" alt="CSS"> CSS</div>
+                    <div class="skill"><img src="{{ url_for('static', filename='images/javascript.png') }}" alt="JavaScript"> JavaScript</div>
+                    <div class="skill"><img src="{{ url_for('static', filename='images/python.png') }}" alt="Python"> Python</div>
+                    <div class="skill"><img src="{{ url_for('static', filename='images/flask.png') }}" alt="Flask"> Flask</div>
+                    <div class="skill"><img src="{{ url_for('static', filename='images/git.png') }}" alt="Git"> Git</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <div class="container">
+                <h2>Portfólio</h2>
+                <div class="portfolio-item">
+                    <div class="carousel">
+                        <div class="carousel-images">
+                            <img src="{{ url_for('static', filename='images/cadastroativos.jpg') }}" alt="Cadastro de Ativos 1">
+                        </div>
+                        <div class="carousel-controls">
+                            <button class="prev">❮</button>
+                            <button class="next">❯</button>
+                        </div>
+                    </div>
+                    <h3>Cadastro de Ativos</h3>
+                    <p>Este projeto é uma aplicação web desenvolvida para gerenciar o cadastro de ativos de uma instituição. Com ele, é possível registrar e acompanhar ativos como computadores, monitores e outros equipamentos de TI. A aplicação oferece uma interface intuitiva para adicionar, editar e excluir ativos, além de funcionalidades para consultar o histórico de cada item. O sistema foi construído utilizando tecnologias como Flask, SQLite, HTML, CSS e JavaScript.</p>
+                    <div class="tech-icons">
+                        <img src="{{ url_for('static', filename='images/flask.png') }}" alt="Flask">
+                        <img src="{{ url_for('static', filename='images/sql.png') }}" alt="SQL">
+                        <img src="{{ url_for('static', filename='images/html.png') }}" alt="HTML">
+                        <img src="{{ url_for('static', filename='images/css.png') }}" alt="CSS">
+                        <img src="{{ url_for('static', filename='images/javascript.png') }}" alt="JavaScript">
+                    </div>
+                    <div class="btn-group">
+                        <a href="https://cadastro-ativos-final-58692e2c6afa.herokuapp.com" class="btn">Ver Projeto</a>
+                        <a href="https://github.com/NathanpSantos/Cadastro_de_Ativos_Projeto_FINAL" class="btn repo-btn">Repositório</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="carousel">
+                        <div class="carousel-images">
+                            <img src="{{ url_for('static', filename='images/principalitens.png') }}" alt="Controle de Itens da Casa 1">
+                            <img src="{{ url_for('static', filename='images/controleitens.jpg') }}" alt="Controle de Itens da Casa 2">
+                            <img src="{{ url_for('static', filename='images/controlealimentos.png') }}" alt="Controle de Itens da Casa 3">
+                            <img src="{{ url_for('static', filename='images/prod_de_limpeza.png') }}" alt="Controle de Itens da Casa 4">
+                            <img src="{{ url_for('static', filename='images/local_da_sala.png') }}" alt="Controle de Itens da Casa 5">
+                           
+                        </div>
+                        <div class="carousel-controls">
+                            <button class="prev">❮</button>
+                            <button class="next">❯</button>
+                        </div>
+                    </div>
+                    <h3>Controle de Itens da Casa</h3>
+                    <p>Este projeto é uma solução web para ajudar na organização dos itens domésticos. Com ele, os usuários podem catalogar e gerenciar itens de diferentes categorias, como produtos de limpeza, alimentos e utensílios. A aplicação permite verificar o status dos itens, saber onde estão localizados e receber alertas sobre itens que precisam ser repostos. Desenvolvido com Flask, HTML, CSS e JavaScript, este projeto visa facilitar a gestão doméstica de maneira eficiente e prática.</p>
+                    <div class="tech-icons">
+                        <img src="{{ url_for('static', filename='images/flask.png') }}" alt="Flask">
+                        <img src="{{ url_for('static', filename='images/html.png') }}" alt="HTML">
+                        <img src="{{ url_for('static', filename='images/css.png') }}" alt="CSS">
+                        <img src="{{ url_for('static', filename='images/javascript.png') }}" alt="JavaScript">
+                    </div>
+                    <div class="btn-group">
+                        <a href="https://controle-itens-casa-765ab0094a88.herokuapp.com" class="btn">Ver Projeto</a>
+                        <a href="https://github.com/NathanpSantos/Controle-de-Itens-da-Casa" class="btn repo-btn">Repositório</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contato</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <img src="{{ url_for('static', filename='images/telefone.png') }}" alt="Phone">
+                        <span>(11) 9 9856-6270</span>
+                    </div>
+                    <div class="contact-item">
+                        <img src="{{ url_for('static', filename='images/email.png') }}" alt="Email">
+                        <span>nathanprsantos@outlook.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <img src="{{ url_for('static', filename='images/localização.png') }}" alt="Location">
+                        <span>Guarulhos - SP - Brasil</span>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/NathanpSantos" target="_blank"><img src="{{ url_for('static', filename='images/github.png') }}" alt="GitHub"></a>
+                    <a href="https://www.linkedin.com/in/nathan-santospr-7604041b3/" target="_blank"><img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 Nathan Santos. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+        </body>
+        </html>
+        
